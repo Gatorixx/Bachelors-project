@@ -1,0 +1,311 @@
+text
+{
+    text-orientation: upright;
+    font-family: sans-serif;
+    font-size: 16px;
+    fill: white;
+    text-anchor: middle;
+}
+
+main
+{
+    margin: 20px 30px 40px;
+}
+
+.sortingPage
+{
+    max-width: 1843px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+#chart
+{
+    position: relative;
+    flex:6;
+    max-height: 550px;
+    height: 550px;
+}
+
+svg
+{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.outerGrid
+{
+    max-width: 1920px;
+    display: grid;
+    grid-template-columns: 55% auto;
+    grid-template-rows: auto;
+    margin: 0px 0px 50px;
+    gap: min(1.5rem,5vw);
+}
+
+.lista
+{
+    height: auto;
+    display: flex;
+    column-gap: 2vw;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.grafPlocha
+{
+    display: flex;
+    flex-direction: column;
+    height: 710px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.textfield
+{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    display: grid;
+    grid-template-columns: 55% auto;
+    grid-template-rows: 40% auto;
+    height: 710px;
+    margin: 0px;
+    gap: min(1.5rem,5vw);
+}
+
+.pseudoText
+{
+    background-color: rgb(46, 46, 46);
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    overflow-y: auto;
+
+    font-size: 18px;
+    padding: 2vh 2vw;
+    text-align: center;
+    margin: 0px;
+}
+
+.pseudoText p
+{
+    margin: 0px;
+    font-size: 15px;
+}
+
+.descriptionText
+{
+    background-color: rgb(46, 46, 46);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.descriptionText p
+{
+    font-size: 20px;
+    padding: 2vh 2vw;
+    text-align: center;
+    margin: 0px;
+}
+
+.variablesText
+{
+    background-color: rgb(46, 46, 46); 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.variablesText p
+{
+    margin: 2px;
+}
+
+.textPartOuter
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 20px;
+}
+
+.textPart
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    padding: 0px 35px;
+    text-align: center;
+    font-size: 20px;
+}
+
+h2
+{
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+p
+{
+    text-align: justify;
+}
+
+.complexityTable
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 5vw;
+    justify-items: center;
+    height: min-content;
+}
+
+.case
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+}
+
+.complexityText
+{
+    font-weight: bold;
+    margin: 0;
+    text-align: left;
+}
+
+.variablesText
+{
+    font-size: 20px;
+    padding: 2vh 2vw;
+    text-align: center;
+    margin: 0px;
+}
+
+.complexityNumber
+{
+    margin: 0;
+    text-align: left;
+}
+
+@media screen and (max-width: 1850px)
+{
+    .descriptionText p
+    {
+        font-size: min(17px, 1vw);
+    }
+
+    .variablesText
+    {
+        font-size: min(17px, 1vw);
+    }
+
+    .pseudoText p
+    {
+        font-size: min(15px, 0.91vw);
+    }
+
+    .grafPlocha 
+    {
+        height: min(710px, 50vw);
+    }
+
+    .textfield
+    {
+        height: min(710px, 50vw);
+    }
+
+    h2 
+    {
+        font-size: 1.5vw;
+    }
+
+    .textPart 
+    {
+        font-size: clamp(13px, 1vw, 17px);
+    }
+
+}
+
+@media screen and (max-width: 1200px)
+{
+    .outerGrid
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .descriptionText p 
+    {
+        font-size: min(20px, 2vw);
+    }
+
+    .variablesText
+    {
+        font-size: min(20px, 2vw);
+    }
+
+    .pseudoText p
+    {
+        font-size: min(20px, 2vw);
+    }
+
+    .grafPlocha 
+    {
+        height: 30vh;
+    }
+
+    #chart
+    {
+        height: 30vh;
+    }
+
+    .textfield
+    {
+        height: auto;
+        max-height: 80vw;
+        min-height: 400px;
+    }
+
+    h2 
+    {
+        font-size: 2vw;
+    }
+
+    .textPart 
+    {
+        font-size: clamp(13px, 1vw, 17px);
+    }
+
+    text
+    {
+        font-size: 10px;
+    }
+    h2 
+    {
+        font-size: 3vw;
+    }
+
+    .textPart 
+    {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .textPart p
+    {
+        font-size: 3vw;
+    }
+}

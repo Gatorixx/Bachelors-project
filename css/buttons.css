@@ -1,0 +1,30 @@
+button
+{
+    cursor: pointer;
+    background-color: rgb(60, 60, 60);
+    border: none;
+    color: white;
+    padding: min(0.7rem, 2rem);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: min(20px, 1.3vw);
+    border-radius: 7px;
+}
+
+button[disabled]
+{
+    background-color: rgb(40, 40, 40);
+}
+
+button:hover
+{
+    background-color: rgb(80, 80, 80);
+}
+
+.buttonsCSS
+{
+    display: flex;
+    justify-content: space-evenly;
+    column-gap: 1%;
+}

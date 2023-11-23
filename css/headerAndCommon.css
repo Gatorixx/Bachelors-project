@@ -1,0 +1,278 @@
+@font-face 
+{
+    font-family: "defaultFont";
+    src: url("fonts/SairaSemiCondensed-Light.ttf") format('truetype');
+}
+
+html
+{
+    background-color:rgb(5, 5, 5);
+    font-family: "defaultFont", serif;
+    height: 100%;
+}
+
+body
+{ 
+    padding: 0px;
+    margin: 0px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    height: fit-content;
+}
+
+main
+{
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+}
+
+header
+{
+    display: flex;
+    position: sticky;
+    top: 0;
+    align-items: center;
+    height: 80px;
+    background-color:rgb(28, 28, 28) ;
+    padding-left: 45px;
+    padding-right: 45px;
+    margin: 0px;
+    z-index: 2;
+}
+
+.centerText
+{
+    margin: 0px 45px;
+}
+
+.centerText a
+{
+    color: white;
+    text-decoration: none;
+    font-size: 38px;
+}
+
+.dropdownContent 
+{
+    display: none;
+    margin: 0 auto;
+    padding: 0px;
+    width: 100%;
+    background-color:rgb(23, 23, 23);
+}
+
+.dropdownContent a
+{
+    padding: 12px 16px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+}
+
+.dropdownContent div a
+{
+    font-weight: bold;
+    color: rgb(0, 162, 232);
+}
+
+.dropdownContent a:hover
+{
+    background-color:   rgb(70, 70, 70);
+}
+
+.show 
+{
+    display:block;
+    position: absolute;
+    top: 80px;
+    left: 0px;
+    width: 300px;
+}
+
+.img
+{
+    width:20px;
+    height:20px;
+    cursor: pointer;
+}
+
+.img_top
+{
+    position: absolute;
+    
+}
+
+.img_top:hover
+{
+    opacity: 0;
+}
+
+#chosen
+{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.menu
+{
+    padding-right: 30px;
+}
+
+#arrowID
+{
+    display: none;
+    transform: rotate(-45deg);
+}
+
+
+.arrow span 
+{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-top: 6px solid rgb(0, 162, 232);
+    border-left: 6px solid rgb(0, 162, 232);
+    animation: animate 1.5s infinite;
+}
+
+@keyframes animate 
+{
+    0% 
+    {
+        opacity: 0;
+        transform: translate(15px, 15px);
+    }
+    20% 
+    {
+        opacity: 1;
+    }
+    70% 
+    {
+        opacity: 1;
+    }
+    100% 
+    {
+        opacity: 0;
+        transform: translate(-10px, -10px);
+    }
+}
+
+
+::-webkit-scrollbar 
+{
+    width: 10px;
+}
+
+
+::-webkit-scrollbar-track 
+{
+    background: rgb(5, 5, 5); 
+}
+
+::-webkit-scrollbar-thumb 
+{
+    background: rgb(70, 70, 70); 
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover 
+{
+    background: rgb(50, 50, 50); 
+    cursor: pointer;
+}
+
+.createdText
+{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+footer
+{
+    display: flex;
+    justify-content: center;
+    background-color:rgb(28, 28, 28);
+    padding-left: 45px;
+    padding-right: 45px;
+    height: 50px;
+    align-items: center;
+}
+
+@media screen and (max-width: 1250px)
+{
+    header
+    {
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 850px) 
+{
+    header 
+    {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .centerText a
+    {
+        font-size: 3.5vw;
+    }
+
+    .centerText 
+    {
+        margin: 0px 30px;
+    }
+
+    .menu 
+    {
+        padding-right: 10px;
+    }
+
+    .createdText
+    {
+        font-size: 2vw;
+    }
+
+    #chosen 
+    {
+        font-size: 2.7vw;
+    }
+
+    .arrow span 
+    {
+        width: 1.3vw;
+        height: 1.3vw;
+        border-top: 0.5vw solid rgb(0, 162, 232);
+        border-left: 0.5vw solid rgb(0, 162, 232);
+        animation: animate 1.5s infinite;
+    }
+
+    @keyframes animate 
+    {
+        0% 
+        {
+            opacity: 0;
+            transform: translate(1.5vw, 1.5vw);
+        }
+        20% 
+        {
+            opacity: 1;
+        }
+        70% 
+        {
+            opacity: 1;
+        }
+        100% 
+        {
+            opacity: 0;
+            transform: translate(-0.8vw, -0.8vw);
+        }
+    }
+}
