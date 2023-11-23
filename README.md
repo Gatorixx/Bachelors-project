@@ -2,7 +2,7 @@
 
 The goal of this project was to create an innovative application that would allow students to easily understand sorting algorithms. For this purpose, the application enables their visualisation and time comparison.
 
-In addition to the bar graph for visualisation, the visualisation part also offers pseudocode, description of steps and live projected variables. Below these main elements is additional information about the algorithm, including its time and memory complexity.
+In addition to the bar chart for visualisation, the visualisation part also offers pseudocode, description of steps and live projected variables. Below these main elements is additional information about the algorithm, including its time and memory complexity.
 
 The time comparison section offers users to choose different variants of initial arrays, including their length. In addition, algorithms can run in parallel or sequentially. Sorting is done locally using javascript and is thus heavily influenced by device hardware. However, this time comparison has primarily a demonstrative purpose for students and cannot be considered as a kind of benchmark.
 
