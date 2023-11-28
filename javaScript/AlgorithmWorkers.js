@@ -7,7 +7,6 @@ let sendTime;                       //Globální promměná čas od posledního 
 
 function mergeSortTP(array)
 {
-    let newArray = array.slice(); //Vytvoření shallow kopie
     startTime = performance.now();
     sendTime = performance.now(); 
 
@@ -19,7 +18,7 @@ function mergeSortTP(array)
 
             let right = Math.min(left + 2 * size - 1, array.length - 1);
 
-            merge(newArray, left, mid, right);
+            merge(array, left, mid, right);
         }
     }
 
@@ -82,7 +81,6 @@ function merge(array , l , m , r)
 
 function quickSortTP(array)
 {
-    let newArray = array.slice(); //Vytvoření shallow kopie
     startTime = performance.now();
     sendTime = performance.now();
 
@@ -98,7 +96,7 @@ function quickSortTP(array)
         let h = stack[top--]; 
         let l = stack[top--]; 
 
-        let p = partition(newArray, l, h); 
+        let p = partition(array, l, h); 
 
         if (p - 1 > l) 
         { 
@@ -111,7 +109,7 @@ function quickSortTP(array)
             stack[++top] = p + 1; 
             stack[++top] = h; 
         } 
-    } 
+    }
     finished = true;
     endTime = performance.now();
     elapsedTime = (endTime - startTime) / 1000;
@@ -146,32 +144,31 @@ function partition(array, l, h)
 
 function heapSortTP(array)
 {
-    let newArray = array.slice(); //Vytvoření shallow kopie
     startTime = performance.now();
     sendTime = performance.now();
 
-    maxHeap(newArray);
+    maxHeap(array);
 
     for (let i = array.length - 1; i > 0; i--)
     {
         let j = 0;
-        let temp = newArray[0];
-        newArray[0] = newArray[i];
-        newArray[i] = temp;
+        let temp = array[0];
+        array[0] = array[i];
+        array[i] = temp;
 
         do
         {
             var index = (2 * j + 1);
-            if (newArray[index] < newArray[index + 1] && index < (i - 1))
+            if (array[index] < array[index + 1] && index < (i - 1))
             {
                 index++;
             }
 
-            if (newArray[j] < newArray[index] && index < i)
+            if (array[j] < array[index] && index < i)
             {
-                let temp = newArray[j];
-                newArray[j] = newArray[index];
-                newArray[index] = temp;
+                let temp = array[j];
+                array[j] = array[index];
+                array[index] = temp;
             }
             j = index;
 
@@ -207,7 +204,6 @@ function maxHeap(array)
 
 function shellSortTP(array)
 {
-    let newArray = array.slice();
     startTime = performance.now();
     sendTime = performance.now();
 
@@ -217,11 +213,11 @@ function shellSortTP(array)
         for(let i = gap; i < array.length; i++)
         {
             let j = i;
-            while(j >= gap && newArray[j - gap] > newArray[j])
+            while(j >= gap && array[j - gap] > array[j])
             {
-                let temp = newArray[j - gap];
-                newArray[j - gap] = newArray[j];
-                newArray[j] = temp;
+                let temp = array[j - gap];
+                array[j - gap] = array[j];
+                array[j] = temp;
                 j = j - gap;
             }
         }
@@ -239,7 +235,6 @@ function shellSortTP(array)
 
 function cocktailTP(array)
 {
-    let newArray = array.slice(); //Vytvoření shallow kopie
     startTime = performance.now();
     sendTime = performance.now();
 
@@ -252,11 +247,11 @@ function cocktailTP(array)
         swapped = false;
         for (let i = start; i < end; i++) 
         {
-            if (newArray[i] > newArray[i + 1]) 
+            if (array[i] > array[i + 1]) 
             {
-                let temp = newArray[i];
-                newArray[i] = newArray[i+1];
-                newArray[i+1] = temp;
+                let temp = array[i];
+                array[i] = array[i+1];
+                array[i+1] = temp;
 
                 swapped = true;
             }
@@ -270,11 +265,11 @@ function cocktailTP(array)
 
         for (let j = end - 1; j >= start; j--) 
         {
-            if (newArray[j] > newArray[j + 1]) 
+            if (array[j] > array[j + 1]) 
             {
-                let temp = newArray[j+1];
-                newArray[j+1] = newArray[j];
-                newArray[j] = temp;
+                let temp = array[j+1];
+                array[j+1] = array[j];
+                array[j] = temp;
                 swapped = true;
             }
         }
@@ -293,7 +288,6 @@ function cocktailTP(array)
 
 function selectionSortTP(array)
 {
-    let newArray = array.slice();
     startTime = performance.now();
     sendTime = performance.now();
 
@@ -303,14 +297,14 @@ function selectionSortTP(array)
 
         for (let j = i + 1; j < array.length; j++)
         {
-            if (newArray[j] < newArray[min])
+            if (array[j] < array[min])
             {
                 min = j;
             }
         }
-        let temp = newArray[i];
-        newArray[i] = newArray[min];
-        newArray[min] = temp;
+        let temp = array[i];
+        array[i] = array[min];
+        array[min] = temp;
 
         messageToSend();
     }
@@ -323,13 +317,12 @@ function selectionSortTP(array)
 
 function binaryInsertionSortTP(array)
 {
-    let newArray = array.slice();
     startTime = performance.now();
     sendTime = performance.now();
         
     for (let i = 1; i < array.length; i++)
     {
-        let temp = newArray[i];
+        let temp = array[i];
         let left = 0;
         let right = i - 1;
 
@@ -337,7 +330,7 @@ function binaryInsertionSortTP(array)
         {
             let mid = Math.floor((left + right) / 2);
             
-            if(temp < newArray[mid])
+            if(temp < array[mid])
             {
                 right = mid - 1;
             }
@@ -349,13 +342,13 @@ function binaryInsertionSortTP(array)
          let j;
         for(j = i - 1; j >= left; j--)
         {
-            let temp2 = newArray[j+1];
-            newArray[j+1] = newArray[j];
-            newArray[j] = temp2;
+            let temp2 = array[j+1];
+            array[j+1] = array[j];
+            array[j] = temp2;
 
         }
 
-        newArray[j+1] = temp;
+        array[j+1] = temp;
         
         messageToSend();     
     }
@@ -368,21 +361,20 @@ function binaryInsertionSortTP(array)
 
 function insertionSortTP(array)
 {
-    let newArray = array.slice();
     startTime = performance.now();
     sendTime = performance.now();
       
     for (let i = 1; i < array.length; i++) 
     {  
-        let key = newArray[i];  
+        let key = array[i];  
         let j = i - 1;  
 
-        while (j >= 0 && newArray[j] > key) 
+        while (j >= 0 && array[j] > key) 
         {  
-            newArray[j + 1] = newArray[j];  
+            array[j + 1] = array[j];  
             j = j - 1;  
         }  
-        newArray[j + 1] = key;  
+        array[j + 1] = key;  
 
         messageToSend();
     }  
@@ -395,7 +387,6 @@ function insertionSortTP(array)
 
 function bubbleSortTP(array)
 {
-    let newArray = array.slice();
     startTime = performance.now();
     sendTime = performance.now();
 
@@ -403,11 +394,11 @@ function bubbleSortTP(array)
     { 
         for (let j = 0; j < (array.length - i - 1); j++) 
         { 
-            if (newArray[j] > newArray[j + 1]) 
+            if (array[j] > array[j + 1]) 
             { 
-                let temp = newArray[j+1];
-                newArray[j+1] = newArray[j];
-                newArray[j] = temp;
+                let temp = array[j+1];
+                array[j+1] = array[j];
+                array[j] = temp;
             } 
         } 
         messageToSend();
