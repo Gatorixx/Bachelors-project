@@ -1,4 +1,4 @@
-# Educational web application for Basics of Algorithmization
+# Educational web application for Basics of Algorithmization course
 
 The goal of this project was to create an innovative application that would allow students to understand sorting algorithms easily. For this purpose, the application enables their visualisation and time comparison.
 
