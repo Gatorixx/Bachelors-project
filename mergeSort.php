@@ -54,8 +54,8 @@
                             <p id="pseudo0"> <b>procedure</b> IterativeMergesort(A)</p>
                             <p id="pseudo1">&nbsp;&nbsp;&nbsp;&nbsp;<b>for</b> size &larr; 1 <b>to</b> A.length - 1 <b>step</b> size * 2 <b>do</b></p>
                             <p id="pseudo2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>for</b> left &larr; 0 <b>to</b> A.length - 2 <b>step</b> size * 2 <b>do</b></p>
-                            <p id="pseudo3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mid &larr; min(left + size - 1, n - 1)</p>
-                            <p id="pseudo4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; right &larr; min(left + 2 * size - 1, n - 1)</p>
+                            <p id="pseudo3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mid &larr; min(left + size - 1, A.length - 1)</p>
+                            <p id="pseudo4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; right &larr; min(left + 2 * size - 1, A.length - 1)</p>
                             <p id="pseudo5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Merge(A, left, mid, right)</p>
                             <p id="pseudo6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end for</p>
                             <p id="pseudo7">&nbsp;&nbsp;&nbsp;&nbsp;end for</p>
