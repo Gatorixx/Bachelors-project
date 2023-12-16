@@ -75,6 +75,18 @@ function reset() //Reset dat
 
     buttons();
     pseudoColours();
+
+    document.getElementById("var1").textContent = "size = Nedefinováno"; //Obnovení všech proměnných
+    document.getElementById("var2").textContent = "left = Nedefinováno";
+    document.getElementById("var3").textContent = "mid = Nedefinováno";
+    document.getElementById("var4").textContent = "right = Nedefinováno";
+    document.getElementById("var5").textContent = "i = Nedefinováno";
+    document.getElementById("var6").textContent = "j = Nedefinováno";
+    document.getElementById("var7").textContent = "k = Nedefinováno";
+    document.getElementById("var8").textContent = "LeftN = Nedefinováno";
+    document.getElementById("var9").textContent = "rightN = Nedefinováno";
+
+    writeText("K ovládání grafu použijte tlačítka nebo pro step šipku v pravo.");
 }
 
 async function mergesort() 
