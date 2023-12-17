@@ -1,12 +1,15 @@
 window.addEventListener('load', function () 
 {
+    document.getElementById("stop").addEventListener("click", stop);
     document.getElementById("random").addEventListener("click", reset); //Reset proměnných
     document.getElementById("descending").addEventListener("click", reset); //Reset proměnných
     document.getElementById("step").addEventListener("click", () =>
     {
         if(!sortStav()) //Pokud není sort v běhu, zavolá ho
         {
+            console.log("volám poprvé sort");
             mergesort();
+            
         }
     });
     document.getElementById("play").addEventListener("click", () =>
@@ -91,8 +94,10 @@ function reset() //Reset dat
 
 async function mergesort() 
 {
+    console.log("začínám sort");
     dataChange_flag = false;
     sort_flag = true; 
+
     for (size = 1; size <= data.length - 1; size = 2 * size) 
     {
         firstSize = true;
@@ -173,7 +178,11 @@ async function  merge(l , m , r)
         pseudoColours("0","DR","1","DR","2","LR","3","LR","4","LR","5","LR","9","LR","10","LR","11","LR","12","LR","13","LR","14","LR","15","LR","16","LR","17","LR","18","LR");
     }
     writeVar();
-    await waitForUserInput(); if(dataChange_flag) return;
+    console.log("jdu do inputu");
+    await waitForUserInput(); 
+    console.log("test");
+    if(dataChange_flag) return;
+    console.log("test1");
 
     while (i < leftArray && j < rightArray) 
     {

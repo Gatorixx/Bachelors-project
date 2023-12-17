@@ -1,7 +1,8 @@
 window.addEventListener('load', function () 
 {
-    document.getElementById("random").addEventListener("click", () => {reset()}); //Reset proměnných
-    document.getElementById("descending").addEventListener("click", () => {reset()}); //Reset proměnných
+    document.getElementById("stop").addEventListener("click", stop);
+    document.getElementById("random").addEventListener("click", reset); //Reset proměnných
+    document.getElementById("descending").addEventListener("click", reset); //Reset proměnných
     document.getElementById("step").addEventListener("click", () =>
     {
         if(!sortStav()) //Pokud není sort v běhu, zavolá ho

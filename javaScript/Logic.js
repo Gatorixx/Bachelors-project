@@ -2,12 +2,19 @@ async function waitForUserInput()
     {
         return new Promise(resolve => 
         {
-            buttons();
+            if(!play_flag) buttons();
 
-            const stepButton = document.getElementById("step"); //Proměnné pro tlačítka
-            const playButton = document.getElementById("play");
-            const stopButton = document.getElementById("stop");
-            const slider = document.getElementById("slider");
+            let stepButton = document.getElementById("step"); //Proměnné pro tlačítka
+            let playButton = document.getElementById("play");
+            let slider = document.getElementById("slider");
+            let randomButton = document.getElementById("random");
+            let descendingButton = document.getElementById("descending");
+
+            stepButton.addEventListener("click", stepHandle);
+            playButton.addEventListener("click", playHandle);
+            slider.addEventListener("input",  sliderHandle);
+            randomButton.addEventListener("click", randomButtonHandle);
+            descendingButton.addEventListener("click", descendingButtonHandle);
 
             const rightArrow = event =>
             {
@@ -20,40 +27,69 @@ async function waitForUserInput()
 
             if(play_flag)
             {
+                cleanHandlers();
                 resolve();
             }
             else
             {
                 document.addEventListener("keydown", rightArrow);
             }
-            
-            stopButton.addEventListener("click", () => 
-            {
-                stop();
-            });
 
-            stepButton.addEventListener("click", () => 
+            function stepHandle()
             {
-                document.removeEventListener("keydown", rightArrow); //Listerner musí být odebrán (V případě, že je krok bez čekání, tak by se instatně pouštěl další)
+                
                 buttons("step");
+                cleanHandlers();
+                console.log("step");
                 resolve();
-            });
+            }
     
-            playButton.addEventListener("click", () => 
+            function playHandle()
             {
                 play_flag = true;
                 buttons("play");
+                cleanHandlers();
+                console.log("play");
                 resolve();
-            });
+            }
 
-            slider.addEventListener("input",  () => 
+            function sliderHandle()
             { 
                 dataChange_flag = true;
+                console.log("slider");
+                cleanHandlers();
                 resolve();
-            });
+            }
 
-            document.getElementById("random").addEventListener("click", () => {dataChange_flag = true; resolve();});
-            document.getElementById("descending").addEventListener("click", () => {dataChange_flag = true; resolve();});
+            function randomButtonHandle()
+            {
+                dataChange_flag = true;
+                console.log("resetDat1");
+                cleanHandlers();
+                resolve();
+            }
+
+            function descendingButtonHandle()
+            {
+                dataChange_flag = true;
+                console.log("resetDat2");
+                cleanHandlers();
+                resolve();
+            }
+
+            function cleanHandlers()
+            {
+                console.log("clean");
+                document.removeEventListener("keydown", rightArrow);
+
+                stepButton.removeEventListener("click", stepHandle);
+                playButton.removeEventListener("click", playHandle);
+
+                slider.removeEventListener("input",  sliderHandle);
+                randomButton.removeEventListener("click", randomButtonHandle);
+                descendingButton.removeEventListener("click", descendingButtonHandle);
+
+            }
         });
     }
 
