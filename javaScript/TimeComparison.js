@@ -219,11 +219,8 @@ function descendingArr(length, array) //Sestupné pole
     }
 }
 
-function algorithmWorkers(algorithm, array) 
+function algorithmWorkers(algorithm, array, array_selection, sort_type) 
 {
-    const array_selection = arraySelect; //při překliknutí tlačítka se nesmí měnit 
-    const sort_type = sortingType;
-
     return new Promise((resolve, reject) => 
     {
         const worker = new Worker("javaScript/AlgorithmWorkers.js"); //Vytvoření workera
@@ -232,7 +229,7 @@ function algorithmWorkers(algorithm, array)
         document.getElementById("stopButton").addEventListener("click", stopSorting); //Přidám listener tlačítku stop
 
 
-        let elements = //Přípava kontentu pro logovaí systém
+        let elements = //Přípava kontentu pro logovací systém
         [
             Object.assign(document.createElement("p"), {innerHTML: algorithm}),
             Object.assign(document.createElement("p"), {innerHTML: array.length}),
@@ -260,6 +257,7 @@ function algorithmWorkers(algorithm, array)
             stopFlag = true; //Flag pro sekvenční spouštění
             resolve(); //Uvolnění promise
             worker.terminate(); //Ukončení workera
+            document.getElementById("stopButton").removeEventListener("click", stopSorting); //Odstranění listeneru pro tlačítko stop
         };
 
         function workerMessage(msg) //Zpráva od workera
@@ -292,6 +290,9 @@ function algorithmWorkers(algorithm, array)
 
 async function runChoice(algo, array) //Funkce vytvářející workery a pouštící je sekvenčně/paralelně
 {
+    const array_selection = arraySelect; //při překliknutí tlačítka se nesmí měnit 
+    const sort_type = sortingType;
+
     try 
     {
         document.getElementById("startButton").disabled = true;
@@ -299,7 +300,7 @@ async function runChoice(algo, array) //Funkce vytvářející workery a poušt�
         
         if(sortingType == "Paralelní")
         {
-            const algorithmPromises = algo.map(algorithm => algorithmWorkers(algorithm, [...array]));
+            const algorithmPromises = algo.map(algorithm => algorithmWorkers(algorithm, array, array_selection, sort_type));
        
             await Promise.all(algorithmPromises); //Pouštím a čekám na všechny puštěné algoritmy
         }
@@ -308,7 +309,7 @@ async function runChoice(algo, array) //Funkce vytvářející workery a poušt�
             for (const algorithm of algo) 
             {
                 if(stopFlag) break; //Když dám stop, zruším všechny ostatní algoritmy
-                await algorithmWorkers(algorithm, [...array]); //
+                await algorithmWorkers(algorithm, array, array_selection, sort_type); //
             }
             stopFlag = false;
         }
