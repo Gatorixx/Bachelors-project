@@ -2,8 +2,6 @@ async function waitForUserInput()
 {
     return new Promise(resolve => 
     {
-        if(!play_flag) buttons();
-
         let stepButton = document.getElementById("step"); //Proměnné pro tlačítka
         let playButton = document.getElementById("play");
         let slider = document.getElementById("slider");
@@ -12,9 +10,15 @@ async function waitForUserInput()
 
         stepButton.addEventListener("click", stepHandle);
         playButton.addEventListener("click", playHandle);
-        slider.addEventListener("input",  sliderHandle);
+        slider.addEventListener("mouseup",  sliderHandle);
         randomButton.addEventListener("click", randomButtonHandle);
         descendingButton.addEventListener("click", descendingButtonHandle);
+
+        if(!play_flag)
+        {
+            buttons();
+            slider.disabled = false;
+        } 
 
         const rightArrow = event =>
         {
@@ -39,14 +43,14 @@ async function waitForUserInput()
         {
             
             buttons("step");
+            slider.disabled = true;
             cleanHandlers();
             resolve();
         }
 
         function playHandle()
         {
-            play_flag = true;
-            buttons("play");
+            play();
             cleanHandlers();
             resolve();
         }
@@ -54,6 +58,7 @@ async function waitForUserInput()
         function sliderHandle()
         { 
             dataChange_flag = true;
+            play_flag = false;
             cleanHandlers();
             resolve();
         }
@@ -61,6 +66,7 @@ async function waitForUserInput()
         function randomButtonHandle()
         {
             dataChange_flag = true;
+            play_flag = false;
             cleanHandlers();
             resolve();
         }
@@ -68,6 +74,7 @@ async function waitForUserInput()
         function descendingButtonHandle()
         {
             dataChange_flag = true;
+            play_flag = false;
             cleanHandlers();
             resolve();
         }
@@ -98,12 +105,16 @@ async function setColour(prom, prom2, colour)
 
 function play()
 {
+    let slider = document.getElementById("slider");
+    slider.disabled = true;
     play_flag = true;
     buttons("play");
 }
 
 function stop()
 {
+    let slider = document.getElementById("slider");
+    slider.disabled = false;
     buttons();
     play_flag = false;
 }

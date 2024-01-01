@@ -95,6 +95,9 @@ function reset() //Reset dat
     buttons(); //Obnovení všech tlačítek
     pseudoColours(); //Odbarvení pseudokodu
 
+    let slider = document.getElementById("slider");
+    slider.disabled = false;
+
     left = 0;
     right = 0;
     mid = 0;
@@ -195,6 +198,9 @@ async function binaryinsertionsort()
     play_flag = false;
     buttons("finished");
     svg.selectAll("rect").attr("fill", "orange");
+    
+    let slider = document.getElementById("slider");
+    slider.disabled = false;
 }
 
 function leftAndRightArrow()

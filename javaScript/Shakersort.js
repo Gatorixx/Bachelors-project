@@ -56,6 +56,9 @@ function reset()
     buttons(); //Obnovení všech tlačítek
     pseudoColours(); //Odbarvení pseudokodu
 
+    let slider = document.getElementById("slider");
+    slider.disabled = false;
+
     document.getElementById("var1").textContent = "i = Nedefinováno";
     document.getElementById("var2").textContent = "j = Nedefinováno";
     document.getElementById("var3").textContent = "start = Nedefinováno";
@@ -161,6 +164,9 @@ async function shakersort()
     play_flag = false;
     buttons("finished");
     svg.selectAll("rect").attr("fill", "orange");
+
+    let slider = document.getElementById("slider");
+    slider.disabled = false;
 }
 
 function writeVar(...variables) 

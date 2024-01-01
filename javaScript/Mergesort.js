@@ -7,7 +7,6 @@ window.addEventListener('load', function ()
     {
         if(!sortStav()) //Pokud není sort v běhu, zavolá ho
         {
-            console.log("volám poprvé sort");
             mergesort();
             
         }
@@ -79,6 +78,9 @@ function reset() //Reset dat
     buttons();
     pseudoColours();
 
+    let slider = document.getElementById("slider");
+    slider.disabled = false;
+
     document.getElementById("var1").textContent = "size = Nedefinováno"; //Obnovení všech proměnných
     document.getElementById("var2").textContent = "left = Nedefinováno";
     document.getElementById("var3").textContent = "mid = Nedefinováno";
@@ -94,7 +96,6 @@ function reset() //Reset dat
 
 async function mergesort() 
 {
-    console.log("začínám sort");
     dataChange_flag = false;
     sort_flag = true; 
 
@@ -129,6 +130,9 @@ async function mergesort()
     play_flag = false;
     buttons("finished");
     svg.selectAll("rect").attr("fill", "orange");
+
+    let slider = document.getElementById("slider");
+    slider.disabled = false;
 }
 
 async function  merge(l , m , r) 
@@ -178,11 +182,8 @@ async function  merge(l , m , r)
         pseudoColours("0","DR","1","DR","2","LR","3","LR","4","LR","5","LR","9","LR","10","LR","11","LR","12","LR","13","LR","14","LR","15","LR","16","LR","17","LR","18","LR");
     }
     writeVar();
-    console.log("jdu do inputu");
     await waitForUserInput(); 
-    console.log("test");
     if(dataChange_flag) return;
-    console.log("test1");
 
     while (i < leftArray && j < rightArray) 
     {

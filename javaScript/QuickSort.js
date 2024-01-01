@@ -69,6 +69,9 @@ function reset()
     buttons(); //Obnovení všech tlačítek
     pseudoColours(); //Odbarvení pseudokodu
 
+    let slider = document.getElementById("slider");
+    slider.disabled = false;
+
     document.getElementById("var1").textContent = "top = Nedefinováno"; //Obnovení všech proměnných
     document.getElementById("var2").textContent = "l = Nedefinováno";
     document.getElementById("var3").textContent = "h = Nedefinováno";
@@ -154,6 +157,9 @@ async function quicksort()
     play_flag = false;
     buttons("finished");
     svg.selectAll("rect").attr("fill", "orange");
+
+    let slider = document.getElementById("slider");
+    slider.disabled = false;
 }
 
 async function partition(low, high)
