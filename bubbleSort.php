@@ -80,14 +80,14 @@
                                 se často používá jako příklad pro seznámení se s řadicími algoritmy.
                                 I přes jeho jednoduchost se tento řadicí algoritmus málo kdy používá v praxi,
                                 jelikož se nejedná o příliš výkonný algoritmus.
-                                Jméno "bublinkové řazení" vychází z principu probublávání bublinek (elementů)
+                                Jméno „bublinkové řazení“ vychází z principu probublávání bublinek (elementů)
                                 na hladinu (na konec či začátek pole).
                         </p>
                         <p>    
                             Algoritmus opakovaně prochází polem a porovnává sousední elementy, které následně vyměňuje
                                 pokud jsou ve špatném pořadí. Každý cyklus se tak jeden element dostane na konec pole
                                 a může být považován za seřazený. Bublinkové řazení popsané v této aplikaci, může být 
-                                dále vylepšeno proměnnou swapped. Ta by zajistila zastavení algoritmu v případě kdy se žádný
+                                dále vylepšeno proměnnou <i>swapped</i>. Ta by zajistila zastavení algoritmu v případě kdy se žádný
                                 element nevymění. Tuto proměnnou lze najít v příkladu řazení přetřásáním.
                         </p>
                         <p>

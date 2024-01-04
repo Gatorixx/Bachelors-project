@@ -91,11 +91,11 @@
                         </h2>
                         <p>
                             Řazení binárním vkládáním (Binary insertion sort) je optimalizovanou verzí klasického řazení vkládáním.
-                            Tato optimalizace leží ve způsobu hledání správné pozice pro element, který se algoritmus 
+                            Tato optimalizace spočívá ve způsobu hledání správné pozice pro element, který se algoritmus 
                             chystá vložit do seřazeného podpole.
                         </p>
                         <p>    
-                            Stejně jako řazení vkládáním, i tento algoritmus rozděluje pole na dvě podpole: seřazené a 
+                            Stejně jako řazení vkládáním i tento algoritmus rozděluje pole na dvě podpole: seřazené a 
                             neseřazené. První element pole je automaticky brán jako seřazený. V každém cyklu pak algoritmus 
                             vybírá vždy první element neseřazeného pole. Narozdíl od řazení vkládáním, algoritmus postupně neporovnává
                             elementy v poli, ale používá k nalezení správné pozice binární vyhledávání. To využívá metodu rozděl a panuj.

@@ -90,7 +90,7 @@
                             Algoritmus rozděluje pole na dvě podpole: seřazené a neseřazené. První element pole je
                                 automaticky brán jako seřazený. V každém cyklu pak algoritmus vybírá vždy první
                                 element neseřazeného
-                                pole a porovnává jej s elemety v seřazeném poli dokud nenajde správné místo
+                                pole a porovnává jej s elemety v seřazeném poli, dokud nenajde správné místo
                                 kam element vložit.
                         </p>
                     </div>

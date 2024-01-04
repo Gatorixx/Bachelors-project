@@ -80,10 +80,10 @@
                             Popis
                         </h2>
                         <p>
-                            Řazení výběrem (Selection sort) může být brán jako opak řazení vkládáním. Místo hledání správného místa pro vybraný element,
+                            Řazení výběrem (Selection sort) může být brán jako opak řazení vkládáním. Místo hledání správného místa pro vybraný element
                                 hledá správný element pro předem vybrané místo. Narozdíl od řazení vkládáním má však menší a konstatní počet
                                 přesunů. I přes jeho jednoduchost není příliš výkonný a jeho využití nalezneme
-                                pro menší datové sady.
+                                u menších datových sad.
                         </p>
                         <p>    
                             Stejně jako řazení vkládáním i řazení výběrem rozděluje pole na dvě podpole: seřazené

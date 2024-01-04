@@ -21,19 +21,18 @@
             Řadicí algoritmy
         </h1>
         <p>
-            Řadicí algoritmy jsou rozsáhlou a dobře probádanou částí informatiky. V dnešním světě, kdy se denně
-            zpracovává obrovské množství dat, je potřeba práci s daty zjednodušit a urychlit jak jen to je možné. 
-            Zde nacházejí své uplatnění řadicí algoritmy, jelikož je manipulace s již seřazenými daty mnohem jednodušší. 
-            Úkolem řadicích algoritmů je tak seřadit data v určeném pořadí. Nemusí se však jednat pouze o čísla v poli.
-            Vstupem mohou být prvky libovolného typu, je však nutné aby byly vždy stejného druhu.
+            Řadicí algoritmy jsou rozsáhlou a dobře probádanou částí informatiky. V dnešním světě se denně
+            zpracovává obrovské množství dat a proto je potřeba práci s daty co nevíce zjednodušit a urychlit. 
+            Zde nacházejí své uplatnění řadicí algoritmy. Jejich úkolem je seřadit data v určeném pořadí. Nemusí se však jednat pouze o čísla v poli.
+            Vstupem mohou být prvky libovolného druhu, je však nutné aby byly vždy stejného typu.
         </p>
         <h1>
             O aplikaci
         </h1>
         <p>
             Tato aplikace byla vytvořena za účelem pomoci studentům jednoduše a rychle pochopit základní řadicí algoritmy, 
-            kterou jsou součástí předmětu Základy algoritmizace. Aplikace umožňuje studentům sledovat jednotlivé kroky 
-            všech algoritmů, pomocí animací, textového popisu, pseudokódu a proměnných. Všechny prvky aplikace byly navrhnuty
+            které jsou součástí předmětu Základy algoritmizace. Aplikace umožňuje studentům sledovat jednotlivé kroky 
+            všech algoritmů pomocí animací, textového popisu, pseudokódu a proměnných. Všechny prvky aplikace byly navrhnuty
             ve snaze o přehlednost a snaží se být co nejvíce intuitivní. Pro přehlednost je však celá aplikace s jejími funkcemi
             detailně popsána v <a href="userManual.php">uživatelské příručce</a>.
         </p>

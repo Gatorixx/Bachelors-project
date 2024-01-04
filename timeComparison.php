@@ -92,13 +92,12 @@
                     </h2>
                     <p>
                         Sekvenční řazení spouští zvolené algoritmy postupně, jeden za druhým.
-                        Zatím co paralelní řazení pustí všechny zvolené algoritmy najednou. V závislosti na hardwaru uživatele 
-                        se může čas při paralelním řazení mírně lišit. Celkový čas dokončení všech algoritmů, však bude menší.
+                        Zatím co paralelní řazení pustí všechny zvolené algoritmy najednou. Výpočty jsou prováděny lokálně pomocí JavaScriptu.
+                         V závislosti na hardwaru uživatele se může čas výpočtu lišit, zejména při paralelním řazení. Celkový čas dokončení všech 
+                         algoritmů při paralelním řazení však bude menší.
                     </p>
-                    <p>
-                        Výpočty jsou prováděny lokálně pomocí javascriptu. Proto se výsledky mohou na 
-                        různých zařízeních lišit.
-                    </p>    
+                        
+  
             </div> 
         </div>     
     </main>

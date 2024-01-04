@@ -110,7 +110,7 @@
                         </h2>
                         <p>
                             Řazení slučováním (Merge sort) je jeden z velice efektivních algoritmů a i přes to, že je již více než 70 let starý, je stále populární. 
-                                Tento algoritmus jako spousta jiných pracuje s metodou rozděl a panuj. Rozděluje tak pole na menší úseky, které seřadí a Následně
+                                Tento algoritmus jako spousta jiných pracuje s metodou rozděl a panuj. Rozděluje tak pole na menší úseky, které seřadí a následně
                                 skládá zpět dohromady. Jelikož tento algoritmus zajišťuje konstatní časovou náročnost, je velice výhodný pro veliké datové sety.
                         </p>
                         <p>    

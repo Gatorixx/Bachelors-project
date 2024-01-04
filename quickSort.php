@@ -109,7 +109,7 @@
                                 Pro jednoduchost se tento příklad drží vyběru posledního elementu v poli.
                         </p>
                         <p>    
-                            Algoritmus jako první krok určí pivot, což je v tomto případě poslední element. Následně prochází celé pole, element po elementu
+                            Algoritmus jako první krok určí pivot. Následně prochází celé pole element po elementu
                                 a všechny elementy menší než pivot zařadí vlevo. Poté stačí pivot vyměnit s prvním větším elementem a označit pivot jako seřazený.
                                 Tento krok může vytvořit dva nové úseky po stranách pivota. Pro tyto úseky však bude platit naprosto stejný postup. Pokud na straně od seřazeného
                                 pivota zůstane pouze jeden element, automaticky ho označíme jako seřazený. 

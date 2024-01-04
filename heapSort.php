@@ -103,7 +103,7 @@
                             Taková halda se pak může nazvat maximální dle anglického Max-Heap.
                         </p>
                         <p>    
-                            Základ algoritmu teda leží ve vytvoření maximální haldy o kterou se stará procedura MaxHeap. Jelikož kořen haldy vždy
+                            Základ algoritmu tedy spočívá ve vytvoření maximální haldy, o kterou se stará procedura MaxHeap. Jelikož kořen haldy vždy
                                 tvoří největší element v poli, algoritmus ho vymění s posledním elementem v poli. Poté už algoritmus jen
                                 využívá informace získané z maximální haldy k jejímu znovu sestavení.
                         </p>

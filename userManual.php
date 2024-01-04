@@ -32,7 +32,7 @@
             by uživatel nemohl plně využít všech funkcí aplikace. Proto aplikace pro tyto zařízení není zcela přizpůsobena. 
         </p>
         <p>
-            Pro správné fungování aplikace musí mít uživatel na svém zařízení povolený javascript. Bez javascriptu nejsou uživateli 
+            Pro správné fungování aplikace musí mít uživatel na svém zařízení povolený JavaScript. Bez JavaScriptu nejsou uživateli 
             k dispozici žádné interaktivní funkce obsluhující aplikaci.
         </p>
         <h3>
@@ -71,20 +71,20 @@
             je 10 sloupců.
         </p>
         <p>
-            <b>Tlačítka "Náhodná data" a "Sestupná data"</b> slouží k nastavení dat sloupcového grafu. Náhodné data jsou genovány funkcí Math.random() a 
+            <b>Tlačítka „Náhodná data“ a „Sestupná data“</b> slouží k nastavení dat sloupcového grafu. Náhodné data jsou genovány funkcí <i>Math.random()</i> a 
             vytváří hodnoty od 0 do 25. Sestupná data jsou odvozeny od hodnoty nastavené na posuvníku, jež určí nejvyšší hodnotu grafu.
         </p>
         <p>
-            <b>Tlačítka "Krok", "Start" a "Stop"</b> slouží k ovládání animační sekvence. Tlačítko "Krok" tedy provede jen část algoritmu a dále čeká na 
-            uživatelské pokyny. Tlačítko "Start" spouští animaci bez čekání na uživatelské pokyny v jednotlivých krocích. Animace pak tedy pokračuje 
-            dokud uživatel tuto sekvenci nezastaví pomocí tlačítka "Stop".
+            <b>Tlačítka „Krok“, „Start“ a „Stop“</b> slouží k ovládání animační sekvence. Tlačítko „Krok“ tedy provede jen část algoritmu a dále čeká na 
+            uživatelské pokyny. Tlačítko „Start“ spouští animaci bez čekání na uživatelské pokyny v jednotlivých krocích. Animace pak pokračuje 
+            dokud uživatel tuto sekvenci nezastaví pomocí tlačítka „Stop“ nebo algoritmus nedokončí řazení.
         </p>
         <h3>
             Sloupcový graf
         </h3>
         <p>
             Sloupcový graf slouží pouze k vizualizaci a se samotným grafem tak uživatel nemůže přímo interagovat. Každý sloupec grafu 
-            obsahuje číselnou hondotu ve své horní části. Základní barva sloupců tyrkysová, avšak v průběhu animací se uživatel může setkat s několika 
+            obsahuje číselnou hondotu ve své horní části. Základní barva sloupců  je tyrkysová, avšak v průběhu animací se uživatel může setkat s několika 
             jinými barvami:
         </p>
         <p class="colouredRect">
@@ -113,12 +113,12 @@
             Panel pseudokódu
         </h3>
         <p>
-            Panel pseudokódu obsahuje celý pseudokód jednotlivých algoritmů. Pole podle standartu začíná v nule. V případě for cyklů, pokud není specifikováno jinak 
-            , se hodnota proměnné zvedá či snižuje o hodnotu 1. Podmínka těchto cyklů se vždy předpokládá <= nebo >=. 
+            Panel pseudokódu obsahuje celý pseudokód jednotlivých algoritmů. Pole podle standartu začíná v nule. V případě for cyklů, pokud není specifikováno jinak, 
+            se hodnota proměnné zvedá či snižuje o hodnotu 1. Podmínka těchto cyklů se vždy předpokládá <= nebo >=. 
             Při vybarvování pseudokódu jsou použity dvě barvy:   
         </p>
         <p class="colouredRect">
-            <b style='color: rgb(56, 0, 0);font-size: 30px'>■</b> - Označení cyklů ve kterých se program stále nachází (Napr. for cykly)
+            <b style='color: rgb(56, 0, 0);font-size: 30px'>■</b> - Označení cyklů, ve kterých se program stále nachází (např. for cykly)
         </p>
         <p class="colouredRect">
             <b style='color: rgb(104, 1, 1);font-size: 30px'>■</b> - Řádky pseudokódu, které proběhly v daném kroku
@@ -127,16 +127,16 @@
             Panel popisu kroků
         </h3>
         <p>
-            Tento panel obsahuje textový popis jednotlivých kroků algoritmu. Tento popis uživateli poskytuje prodrobnosti o tom co se v daném kroku stalo a 
-            popřípadě proč se tomu stalo. I zde jsou v některých siruacích použity barvy. Pro hodnotu sloupce je použita červená barva a pro pořadí sloupce je použitá 
-            žlutá barva společně se znakem "#" pro jednoznačné rozlišení. Výjimkou jsou pak barvy použity na podstránce řazení binárním vkládáním, které referují hodnoty jednotlivých šipek.
+            Tento panel obsahuje textový popis jednotlivých kroků algoritmu. Tento popis uživateli poskytuje prodrobnosti o tom, co se v daném kroku stalo a 
+            popřípadě proč se tomu stalo. I zde jsou v některých situacích použity barvy. Pro hodnotu sloupce je použita červená barva a pro pořadí sloupce je použita 
+            žlutá barva společně se znakem „#“ pro jednoznačné rozlišení. Výjimkou jsou pak barvy použity na podstránce řazení binárním vkládáním, které referují hodnoty jednotlivých šipek.
         </p>
         <h3>
             Panel proměnných
         </h3>
         <p>
             Panel proměnných zobrazuje aktuální hodnotu všech proměnných použitých v daném algoritmu. Při načtení stránky a po resetování dat jsou hodnoty vždy nastaveny jako nedefinovány. 
-            V okamžiku kdy je promměné poprvé přiřazena hodnota, je tato hodnota obratem zobrazena v panelu proměnných. 
+            V okamžiku, kdy je proměnné poprvé přiřazena hodnota, je tato hodnota obratem zobrazena v panelu proměnných. 
         </p>
         <h3>
             Popis a složitost
@@ -149,7 +149,7 @@
             Porovnávací část
         </h2>
         <p>
-            Podstránka pro časové porovnání je rozdělena na dvě sekce. Formulář pro nastavení počátečník podmínek řazení a záznamová část pro výsledky těchto řazení.
+            Podstránka pro časové porovnání je rozdělena na dvě sekce. Formulář pro nastavení počátečních podmínek řazení a záznamová část pro výsledky těchto řazení.
         </p>
         <h3>
             Formulář pro časové porovnání algoritmů
@@ -165,14 +165,14 @@
             Konkrétně se zde nacházejí čtyři tlačítka:
         </p>
         <p>
-            <b>Náhodné</b> - Pole s náhodnými elementy vytvořené pomocí funkce Math.random().
+            <b>Náhodné</b> - Pole s náhodnými elementy vytvořené pomocí funkce <i>Math.random()</i>.
         </p>
         <p>
-            <b>Téměř seřazené</b> - Pole obsahující téměř všechny elementy ve vzestupném pořadí, až na několik elementů posunuté o <b>n</b> hodnotu mimo svou 
+            <b>Téměř seřazené</b> - Pole obsahující téměř všechny elementy ve vzestupném pořadí, až na několik elementů posunuté o <b>k</b> hodnotu mimo svou 
             správnou pozici.
         </p>
         <p>
-            <b>Sestupné</b> - Pole obsahující všechny elementy v sestupném(Obráceném) pořadí. 
+            <b>Sestupné</b> - Pole obsahující všechny elementy v sestupném (obráceném) pořadí. 
         </p>
         <p>
             <b>Několik unikátních</b> - Pole obsahující pouze určitý počet unikátních elementů v poli. To znamená, že většina elementů v poli je stejná. 
@@ -180,27 +180,25 @@
         </p>
         <p>
             <b>Výběr algoritmů</b> umožňuje uživateli zvolit algoritmy pro následné porovnání rychlosti. Počet vybraných algoritmů není omezen a uživatel 
-            tak můžu zaškrtnout všechna pole. Vždy však musí být zaškrtnuto alespoň jedno.
+            tak může zaškrtnout všechna pole. Vždy však musí být zaškrtnuto alespoň jedno.
         </p>
         <p>
-            <b>Tlačítka typu řazení</b> nabízí uživateli provádět sort buďto sekvenčně si paralelně. Sekvenční řazení pouští zvolené algoritmy jeden 
-            podruhém. Při paralelním řazení probíhá řazení všech algoritmů najednou. Celkový čas řazení při spuštění více algoritmů bude při paralelním 
-            řazení rychlejší, je však možné, že na základě hardwaru uživatele, budou jednotlivé výsledky mírně ovlivněny.
+            <b>Tlačítka typu řazení</b> nabízí uživateli provádět řazení buďto sekvenčně nebo paralelně. Sekvenční řazení pouští zvolené algoritmy jeden 
+            po druhém. Při paralelním řazení probíhá řazení všech algoritmů najednou. Celkový čas řazení při spuštění více algoritmů bude při paralelním 
+            řazení rychlejší.
+
+            Výpočty jsou prováděny lokálně pomocí JavaScriptu. V závislosti na hardwaru uživatele se může čas výpočtu lišit, zejména při paralelním řazení.
         </p>
         <p>
-            <b>Ovládací tlačítka</b> slouží k zahájení, popřípadně ukončení, porovnávací sekvence a k resetu formuláře. V případě zmáčknutí tlačítka stop jsou 
+            <b>Ovládací tlačítka</b> slouží k zahájení, popřípadně ukončení, porovnávací sekvence a k resetu formuláře. V případě zmáčknutí tlačítka „Stop“ jsou 
             všechny stále probíhající algoritmy přerušeny.
         </p>
         <h3>
             Záznamová část
         </h3>
         <p>
-            Záznamová část slouží k uchování výsledků z jednotlivých měření. Zapsané výsledky vždy obsahují všechny počáteční podmínky zadané uživatel. V pořadí
-            : Název algoritmu, počet elementů, počáteční podmínky pole, typ řazení a naměřený čas.
-        </p>
-        <p>
-            Měření řadicích algoritmů je prováděno v javascriptu a výsledky se tam mohou vychylovat od měření prováděných v jiným jazycích. Uživatel také musí 
-            brát v potaz použitý hardware.
+            Záznamová část slouží k uchování výsledků z jednotlivých měření. Zapsané výsledky vždy obsahují všechny počáteční podmínky zadané uživatelem. V pořadí
+            : název algoritmu, počet elementů, počáteční podmínky pole, typ řazení a naměřený čas.
         </p>
     </main>
     <?php require_once("footer.php")?>
